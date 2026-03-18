@@ -1,0 +1,177 @@
+/* =====================================================
+   Pearl & Pixel Marketing Styles
+   Generated with assistance from ChatGPT
+   I edited the provided code to customized it the this current website. I also read in depth how each step works if I used ChatGPT.
+   ===================================================== */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #0b1f3a;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffbeeb;
+  border-bottom: 2px solid #ffbeeb;
+  padding-bottom: 4px;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  background-image:
+    linear-gradient(rgba(11, 31, 58, 0.6), rgba(11, 31, 58, 0.6)),
+    url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 120px 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  display: flex;
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 30px;
+  height: 100%;
+}
+
+/* CARD IMAGES */
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* CARD TEXT */
+.card h2 {
+  color: #0b1f3a;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card p {
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0b1f3a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #0b1f3a;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card-img {
+    height: 200px;
+  }
+}

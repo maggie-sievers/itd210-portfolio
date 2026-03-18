@@ -1,0 +1,331 @@
+/* Created with help from ChatGPT, tweaks and edits by Maggie */
+
+
+/* ------------------------ */
+/* GLOBAL PAGE STYLES       */
+/* ------------------------ */
+body {
+  font-family: Arial, sans-serif; /* clean and readable font for all text */
+  margin: 0;                      /* remove default spacing */
+  line-height: 1.6;               /* improve readability */
+  background: #f0f2f3;            /* light neutral page background */
+  color: #003366;                 /* dark blue text */
+}
+
+/* ------------------------ */
+/* HEADER STYLES            */
+/* ------------------------ */
+header {
+  background: #003366;            /* main nav color */
+  color: white;                   /* text contrast */
+  padding: 20px;                  /* spacing inside header */
+  text-align: center;
+  position: relative;             /* needed for positioning hamburger button */
+}
+
+/* ------------------------ */
+/* NAVIGATION MENU          */
+/* ------------------------ */
+.nav-menu {
+  display: flex;                  /* flex layout for menu items */
+  flex-direction: row;            /* horizontal layout by default */
+  justify-content: center;        /* center menu items */
+  gap: 10px;                      /* space between links */
+  list-style: none;               /* remove bullets */
+  padding: 0;
+}
+
+.nav-menu a {
+  color: white;                   /* menu text */
+  text-decoration: none;          /* remove underline */
+  font-weight: bold;
+  padding: 8px 14px;              /* clickable padding */
+  border-radius: 5px;             /* subtle rounding for hover effect */
+  transition: 0.3s;               /* smooth hover effect */
+}
+
+.nav-menu a:hover {
+  background: #71b1c5;            /* light blue hover effect */
+  color: #003366;                 /* change text to dark on hover */
+}
+
+/* ------------------------ */
+/* HAMBURGER BUTTON         */
+/* ------------------------ */
+.nav-toggle {
+  display: none;                  /* only visible on mobile */
+  background: none;
+  border: none;
+  font-size: 2rem;                /* large for easy tapping */
+  color: white;
+  cursor: pointer;
+  position: absolute;             /* top right corner */
+  top: 25px;
+  right: 20px;
+}
+
+/* ------------------------ */
+/* HERO SECTION             */
+/* ------------------------ */
+.hero {
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), /* dark overlay for readability */
+    url('../images/hero.png') no-repeat center center; /* hero background image */
+  background-size: cover;          /* cover entire section */
+  text-align: center;
+  padding: 80px 20px;
+  color: white;                    /* white text for visibility */
+}
+
+.hero h2 {
+  font-size: 2.5rem;               /* big headline */
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;               /* slightly larger paragraph */
+  margin-bottom: 20px;
+}
+
+/* ------------------------ */
+/* HERO BUTTON              */
+/* ------------------------ */
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: white;               /* white background for contrast */
+  color: #003366;                  /* dark text */
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px;             /* pill shaped button */
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid white;         /* optional border for hover effect */
+}
+
+.hero-btn:hover {
+  background: #71b1c5;             /* accent color on hover */
+  color: white;                     /* white text on hover */
+  border: 2px solid #71b1c5;
+}
+
+/* ------------------------ */
+/* MAIN CONTENT             */
+/* ------------------------ */
+.main-content {
+  display: flex;
+  flex-direction: column;          /* stacked layout by default */
+  gap: 50px;                       /* space between sections */
+  max-width: 1100px;
+  margin: auto;                     /* center content horizontally */
+  padding: 30px 20px;
+}
+
+/* ------------------------ */
+/* ABOUT SECTION            */
+/* ------------------------ */
+.about-section {
+  display: flex;                    /* side by side on desktop */
+  flex-wrap: wrap;                  /* stack on smaller screens */
+  gap: 30px;
+  align-items: center;              /* vertically center image/text */
+}
+
+.about-image {
+  flex: 1 1 50%;                    /* take up half width */
+  display: flex;
+  justify-content: center;          /* center image horizontally */
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;                 /* limit image size */
+  object-fit: cover;                /* maintain aspect ratio */
+  border-radius: 15px;              /* soft corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow */
+  border: 4px solid #71b1c5;       /* accent border */
+}
+
+.about-text {
+  flex: 1 1 50%;                    /* take up half width */
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;               /* center paragraphs */
+}
+
+/* ------------------------ */
+/* SKILLS SECTION           */
+/* ------------------------ */
+.skills-section-wrapper {
+  background: #003366;              /* same as header */
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.skills h2 {
+  color: #f0f2f3;                  /* light text for contrast */
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.skills-container {
+  display: grid;                    /* grid layout for skill cards */
+  grid-template-columns: 1fr;       /* stacked on mobile */
+  gap: 20px;
+  justify-items: center;            /* center cards in grid */
+}
+
+.skill-card {
+  background: #71b1c5;              /* skill card color */
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;                 /* uniform width */
+  min-height: 250px;                /* ensure consistent height */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s, border-bottom 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 4px solid transparent; /* for hover effect */
+  will-change: transform;
+}
+
+/* Skill card images */
+.skill-card img {
+  width: 100%;
+  max-width: 250px;                /* uniform width */
+  height: 200px;                   /* uniform height */
+  object-fit: contain;             /* maintain proportions */
+  margin-bottom: 15px;             /* spacing between image and text */
+}
+
+.skill-card h3,
+.skill-card p {
+  color: #f0f2f3;                  /* readable text on dark card */
+}
+
+.skill-card:hover {
+  transform: scale(1.03);           /* pop effect */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* stronger shadow on hover */
+  border-bottom: 4px solid #f0f2f3; 
+  background: linear-gradient(135deg, #71b1c5 0%, #cbe6ef 100%); /* gradient hover */
+  color: #003366;                   /* dark text on hover */
+}
+
+/* ------------------------ */
+/* VALUES SECTION           */
+/* ------------------------ */
+.values {
+  background: #71b1c5;              /* value section background */
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr;       /* stacked on mobile */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.value-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-top 0.3s ease;
+  will-change: transform;
+}
+
+.value-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  border-top: 4px solid #71b1c5;
+}
+
+/* ------------------------ */
+/* FOOTER STYLES            */
+/* ------------------------ */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ------------------------ */
+/* MEDIA QUERIES            */
+/* ------------------------ */
+
+/* Tablet layout */
+@media (min-width: 600px) {
+  .nav-menu {
+    flex-direction: row;            /* horizontal menu on tablet */
+    justify-content: center;
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns for values */
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 900px) {
+  .skills-container {
+    grid-template-columns: 1fr 1fr; /* 2 columns for skills */
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns for values */
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;               /* bigger hero headline */
+  }
+}
+
+/* Mobile layout - hamburger & responsive about */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: #003366;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 0 10px;
+  }
+
+  .nav-menu.show {
+    display: flex;                     /* show menu when toggled */
+  }
+
+  .nav-toggle {
+    display: block;                     /* show hamburger on mobile */
+  }
+
+  .about-section {
+    flex-direction: column;             /* stack image/text */
+    padding: 20px;
+  }
+
+  .about-image,
+  .about-text {
+    flex: 1 1 100%;                     /* full width on mobile */
+  }
+
+  .about-image img {
+    max-width: 300px;                   /* smaller image on mobile */
+  }
+}
