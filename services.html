@@ -3,10 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pearl & Pixel Marketing</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Pearl & Pixel Marketing | Services</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Services Page</h1>
+
+<body class="bg-gray-50 text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full h-20 bg-[#0b1f3a] z-50 flex justify-center shadow-md">
+
+  <nav class="w-full max-w-[1200px] px-6 flex items-center h-full">
+
+    <a href="index.html"
+       class="text-white font-bold text-lg hover:text-[#ffbeeb] transition">
+      Pearl & Pixel
+    </a>
+
+    <ul class="ml-auto flex gap-8 text-white text-sm font-medium">
+
+      <li><a href="index.html" class="hover:text-[#ffbeeb] transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-[#ffbeeb] transition">About</a></li>
+      <li><a href="services.html" class="text-[#ffbeeb] border-b-2 border-[#ffbeeb] pb-1">Services</a></li>
+      <li><a href="portfolio.html" class="hover:text-[#ffbeeb] transition">Portfolio</a></li>
+      <li><a href="contact.html" class="hover:text-[#ffbeeb] transition">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+<!-- ================= SPACING FIX (IMPORTANT) ================= -->
+<div class="h-20"></div>
+
+<!-- ================= HERO ================= -->
+<section class="relative h-[80vh] flex items-center justify-center text-center text-white overflow-hidden">
+
+  <!-- background image -->
+  <img src="images/AdobeStock_311664622.jpeg"
+       alt="Marketing background"
+       class="absolute inset-0 w-full h-full object-cover" />
+
+  <!-- overlay -->
+  <div class="absolute inset-0 bg-[#0b1f3a]/60"></div>
+
+  <!-- content -->
+  <div class="relative z-10 max-w-3xl px-4">
+
+    <span class="text-[#ffbeeb] text-sm uppercase tracking-widest font-semibold">
+      Strategy • Design • Growth
+    </span>
+
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-4 mb-4">
+      Our Services
+    </h1>
+
+    <p class="text-gray-200 text-lg">
+      We help brands grow through creative marketing, design, and digital strategy.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ================= SERVICES GRID ================= -->
+<section class="py-20 px-6">
+
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="text-3xl font-bold text-center mb-12">
+      What We Offer
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="bg-white rounded-xl shadow-md p-6
+                  hover:-translate-y-2 hover:shadow-xl
+                  transition duration-300 border-t-4 border-[#0b1f3a]">
+        <h3 class="text-xl font-bold mb-2">Brand Strategy</h3>
+        <p class="text-gray-600">
+          We build strong, memorable brand identities that connect with your audience.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6
+                  hover:-translate-y-2 hover:shadow-xl
+                  transition duration-300 border-t-4 border-[#0b1f3a]">
+        <h3 class="text-xl font-bold mb-2">Social Media Marketing</h3>
+        <p class="text-gray-600">
+          Grow engagement and reach across Instagram, TikTok, and more platforms.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6
+                  hover:-translate-y-2 hover:shadow-xl
+                  transition duration-300 border-t-4 border-[#0b1f3a]">
+        <h3 class="text-xl font-bold mb-2">Website Design</h3>
+        <p class="text-gray-600">
+          Clean, responsive websites designed for performance and conversions.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6
+                  hover:-translate-y-2 hover:shadow-xl
+                  transition duration-300 border-t-4 border-[#0b1f3a]">
+        <h3 class="text-xl font-bold mb-2">Content Creation</h3>
+        <p class="text-gray-600">
+          High-quality visuals, graphics, and storytelling content for your brand.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6
+                  hover:-translate-y-2 hover:shadow-xl
+                  transition duration-300 border-t-4 border-[#0b1f3a]">
+        <h3 class="text-xl font-bold mb-2">SEO Optimization</h3>
+        <p class="text-gray-600">
+          Improve search rankings and drive organic traffic to your website.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6
+                  hover:-translate-y-2 hover:shadow-xl
+                  transition duration-300 border-t-4 border-[#0b1f3a]">
+        <h3 class="text-xl font-bold mb-2">Analytics & Growth</h3>
+        <p class="text-gray-600">
+          Data-driven insights to scale your business efficiently.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="bg-[#0b1f3a] text-white text-center py-16 px-6">
+
+  <h2 class="text-3xl font-bold mb-4">
+    Ready to Grow Your Brand?
+  </h2>
+
+  <p class="text-gray-300 mb-6">
+    Let’s build something powerful together.
+  </p>
+
+  <a href="contact.html"
+     class="bg-[#ffbeeb] text-[#0b1f3a] font-semibold px-6 py-3 rounded-lg
+            hover:bg-pink-300 transition duration-300">
+    Get Started
+  </a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 text-center py-6">
+
+  <p class="text-sm">
+    © 2026 Pearl & Pixel Marketing
+  </p>
+
+</footer>
+
 </body>
 </html>
