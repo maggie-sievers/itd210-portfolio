@@ -1,12 +1,153 @@
+<!-- =========================
+HTML CODE CREDIT
+=========================
+Some HTML structure and layout organization in this file was developed with
+assistance from ChatGPT (OpenAI). I reviewed, edited, and customized
+all content to meet course requirements and design goals.
+========================= -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pearl & Pixel Marketing</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Pearl & Pixel | Portfolio</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <h1>Portfolio Page</h1>
+
+<!-- ================= NAVBAR (SAME ON ALL PAGES) ================= -->
+<nav class="navbar">
+  <a href="index.html" class="logo">Pearl & Pixel</a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a class="active" href="gallery.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="nav-spacer"></div>
+
+<!-- ================= HERO ================= -->
+<header class="hero hero-portfolio">
+  <div class="hero-content">
+    <h1>Our Portfolio</h1>
+    <p>Fake client projects showcasing branding, web design, and digital storytelling.</p>
+  </div>
+</header>
+
+<!-- ================= FILTER BUTTONS ================= -->
+<section class="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="web">Web Design</button>
+  <button class="filter-btn" data-filter="branding">Branding</button>
+</section>
+
+<!-- ================= PORTFOLIO GRID (REQUIRED CSS GRID) ================= -->
+<main class="portfolio-grid">
+
+  <div class="proj-card" data-category="web">
+    <img src="images/photo-1522542550221-31fd19575a2d.avif" alt="Modern dashboard UI design" loading="lazy">
+    <div class="proj-overlay">
+      <h3>Nova Dashboard</h3>
+      <p>Web App UI Design</p>
+      <button class="open-modal" data-title="Nova Dashboard" data-img="images/project1.jpg">View</button>
+    </div>
+  </div>
+
+  <div class="proj-card" data-category="branding">
+    <img src="images/photo-1521737604893-d14cc237f11d.avif" alt="Brand identity mockup" loading="lazy">
+    <div class="proj-overlay">
+      <h3>Luna Branding</h3>
+      <p>Brand Identity System</p>
+      <button class="open-modal" data-title="Luna Branding" data-img="images/project2.jpg">View</button>
+    </div>
+  </div>
+
+  <div class="proj-card" data-category="web">
+    <img src="images/photo-1559028012-481c04fa702d.avif" alt="Portfolio website design" loading="lazy">
+    <div class="proj-overlay">
+      <h3>Pixel Studio</h3>
+      <p>Portfolio Website</p>
+      <button class="open-modal" data-title="Pixel Studio" data-img="images/project3.jpg">View</button>
+    </div>
+  </div>
+
+  <div class="proj-card" data-category="branding">
+    <img src="images/photo-1498050108023-c5249f4df085.avif" alt="Minimal logo design" loading="lazy">
+    <div class="proj-overlay">
+      <h3>Aurora Identity</h3>
+      <p>Brand Kit</p>
+      <button class="open-modal" data-title="Aurora Identity" data-img="images/project4.jpg">View</button>
+    </div>
+  </div>
+
+  <div class="proj-card" data-category="web">
+    <img src="images/photo-1507238691740-187a5b1d37b8.avif" alt="E-commerce UI design" loading="lazy">
+    <div class="proj-overlay">
+      <h3>ShopFlow</h3>
+      <p>E-Commerce Platform</p>
+      <button class="open-modal" data-title="ShopFlow" data-img="images/project5.jpg">View</button>
+    </div>
+  </div>
+
+  <div class="proj-card" data-category="branding">
+    <img src="images/photo-1519389950473-47ba0277781c.avif" alt="Marketing campaign design" loading="lazy">
+    <div class="proj-overlay">
+      <h3>Bloom Campaign</h3>
+      <p>Marketing Design</p>
+      <button class="open-modal" data-title="Bloom Campaign" data-img="images/project6.jpg">View</button>
+    </div>
+  </div>
+
+  <div class="proj-card" data-category="web">
+    <img src="images/photo-1502945015378-0e284ca1a5be.avif" alt="Mobile app UI screens" loading="lazy">
+    <div class="proj-overlay">
+      <h3>Pulse App</h3>
+      <p>Mobile UI Design</p>
+      <button class="open-modal" data-title="Pulse App" data-img="images/project7.jpg">View</button>
+    </div>
+  </div>
+
+  <div class="proj-card" data-category="branding">
+    <img src="images/photo-1551288049-bebda4e38f71.avif" alt="Luxury brand identity" loading="lazy">
+    <div class="proj-overlay">
+      <h3>Velvet Co.</h3>
+      <p>Luxury Branding</p>
+      <button class="open-modal" data-title="Velvet Co." data-img="images/project8.jpg">View</button>
+    </div>
+  </div>
+
+  <div class="proj-card" data-category="web">
+    <img src="images/photo-1522071820081-009f0129c71c.avif" alt="Landing page design" loading="lazy">
+    <div class="proj-overlay">
+      <h3>Launch Page</h3>
+      <p>Landing Page Design</p>
+      <button class="open-modal" data-title="Launch Page" data-img="images/project9.jpg">View</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h3 id="modal-title"></h3>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  © 2026 Pearl & Pixel Marketing
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
