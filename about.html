@@ -1,145 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pearl & Pixel Marketing | About</title>
-<link rel="stylesheet" href="css/style.css">
-
-<!-- 
-  About Page Code
-  ------------------------
-  Base template created with help from ChatGPT.
-  All tweaks, edits, wording changes, layout improvements, and design choices were done by Maggie.
--->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearl & Pixel | About</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- HEADER AND NAVIGATION -->
-<header>
-  <h1>Pearl & Pixel Marketing</h1>
+<nav class="navbar">
+  <a href="index.html" class="logo">Pearl & Pixel</a>
 
-  <!-- Hamburger button for mobile -->
-  <button class="nav-toggle" aria-label="Toggle navigation">
-    &#9776;
-  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active" href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <nav>
-    <ul class="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<header class="hero" style="background-image:url('images/hero.jpg')">
+  <div class="hero-content">
+    <h1>About Pearl & Pixel</h1>
+  </div>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <h2>Creative Marketing Meets Modern Design</h2>
-  <p>
-    Pearl & Pixel Marketing focuses on helping businesses grow through
-    creative branding, modern web design, and thoughtful digital strategy through media.
-  </p>
-  <a href="#" class="hero-btn">View My Work</a>
-</section>
-
-<!-- MAIN CONTENT -->
-<main class="main-content">
-
-  <!-- ABOUT SECTION -->
+<main>
   <section class="about-section">
-    <div class="about-image">
-      <img src="images/Headshots-99.jpg" 
-           alt="Maggie's headshot from the NVCC career fair">
+
+    <div class="about-img">
+      <img src="images/Headshots-99.jpg" alt="Headshot of Maggie">
     </div>
+
     <div class="about-text">
-      <h2>About Pearl & Pixel</h2>
+      <h2>Who We Are</h2>
       <p>
-        Pearl & Pixel Marketing is a creative marketing project focused
-        on helping businesses build strong digital identities and
-        connect with their audiences online.
+        Pearl & Pixel Marketing is a creative marketing brand focused on building strong digital identities.
       </p>
       <p>
-        This website demonstrates responsive web design using modern
-        layout techniques such as CSS Grid and Flexbox.
-      </p>
-      <p>
-        Design inspiration came from
-        <a href="https://www.canva.com/learn/unique-inspiring-about-page/" target="_blank">
-          Canva's About Page Inspiration
-        </a>.
+        We specialize in web design, branding, and strategy to help businesses grow.
       </p>
     </div>
-  </section>
 
-  <!-- SKILLS SECTION -->
-  <section class="skills-section-wrapper">
-    <section class="skills">
-      <h2>What We Offer</h2>
-      <div class="skills-container">
-        <div class="skill-card">
-          <img src="images/web_design.jpeg" alt="Two people working on one computer with a paper filled with colors next to them">
-          <h3>Web Design</h3>
-          <p>I help to craft responsive, modern websites that look amazing on any device and bring your brand to life.</p>
-        </div>
-        <div class="skill-card">
-          <img src="images/branding.jpeg" alt="Build Your Brand written on wooden blocks">
-          <h3>Branding</h3>
-          <p>Designing visual identities that tell your story and leave a lasting impression.</p>
-        </div>
-        <div class="skill-card">
-          <img src="images/social_media.jpeg" alt="A woman holding a phone with emojis coming through the screen">
-          <h3>Social Media Strategy</h3>
-          <p>Creating engaging content and campaigns that connect with your audience and spark conversations.</p>
-        </div>
-        <div class="skill-card">
-          <img src="images/seo.jpeg" alt="SEO written on paper with a cup of coffee next to the paper">
-          <h3>SEO Fundamentals</h3>
-          <p>Helping your business get discovered online by the right people at the right time.</p>
-        </div>
-      </div>
-    </section>
   </section>
-
-  <!-- VALUES SECTION -->
-  <section class="values">
-    <h2>Our Values</h2>
-    <div class="value-grid">
-      <div class="value-card">
-        <h3>Creativity</h3>
-        <p>We bring fresh ideas to every project, turning visions into innovative solutions.</p>
-      </div>
-      <div class="value-card">
-        <h3>Strategy</h3>
-        <p>Every move is intentional, guided by planning and a clear vision for success.</p>
-      </div>
-      <div class="value-card">
-        <h3>Growth</h3>
-        <p>We focus on helping brands expand, connect, and thrive in meaningful ways.</p>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 Pearl & Pixel Marketing</p>
 </footer>
-
-<!-- JAVASCRIPT FOR HAMBURGER -->
-<script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
-</script>
 
 </body>
 </html>
