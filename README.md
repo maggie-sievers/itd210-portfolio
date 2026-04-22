@@ -1,4 +1,4 @@
-# Portfolio Website — Maggie Sievers
+# Portfolio Website Milestone 3— Maggie Sievers
 
 ## About This Project
 
