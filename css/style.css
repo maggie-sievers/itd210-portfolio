@@ -1147,3 +1147,702 @@ Creates layout, animation, and accessibility support
 video {
   background: black;
 }
+
+/* =========================
+   CONTACT CONTAINER
+========================= */
+.contact-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FORM */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ACCESSIBILITY FOCUS */
+input:focus, textarea:focus {
+  outline: 3px solid #ffbeeb;
+}
+
+/* ERRORS */
+.error {
+  color: red;
+  font-size: 0.85em;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #0b1f3a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover,
+button:focus {
+  background: #ffbeeb;
+  color: #0b1f3a;
+  outline: 3px solid #ffbeeb;
+}
+
+/* SUCCESS */
+.success {
+  display: none;
+  margin-top: 20px;
+  background: #d4edda;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* COUNTER */
+.counter {
+  font-size: 0.8em;
+  text-align: right;
+}
+
+/* =========================
+   FAQ SECTION (NEW AREA)
+========================= */
+.faq-section {
+  padding: 80px 40px;
+  background: #f0f2f3;
+  text-align: center;
+}
+
+.faq {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+/* ACCORDION BUTTON */
+.faq-btn {
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* SMOOTH ACCORDION */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #ffffff;
+  padding: 0 10px;
+}
+
+/* OPEN STATE */
+.faq-content.open {
+  max-height: 200px;
+  padding: 10px;
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* =========================
+   CONTACT PAGE STYLES (CLEAN VERSION)
+   WHY: scoped styles to avoid conflicts with global CSS
+========================= */
+
+/* MAIN CONTAINER */
+.contact-container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* INTRO TEXT */
+.contact-container h1 {
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* =========================
+   FORM STYLES
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ACCESSIBILITY FOCUS */
+input:focus,
+textarea:focus {
+  outline: 3px solid #ffbeeb;
+  border-color: transparent;
+}
+
+/* ERROR TEXT */
+.error {
+  color: #c62828;
+  font-size: 0.85rem;
+  min-height: 16px;
+}
+
+/* CHARACTER COUNTER */
+.counter {
+  font-size: 0.8rem;
+  text-align: right;
+  color: #666;
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #0b1f3a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:hover,
+button:focus {
+  background: #ffbeeb;
+  color: #0b1f3a;
+  outline: 3px solid #ffbeeb;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+.success {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: #d4edda;
+  border-radius: 10px;
+  color: #155724;
+}
+
+/* =========================
+   FAQ SECTION (SEPARATE AREA)
+========================= */
+.faq-section {
+  padding: 80px 40px;
+  background: #f0f2f3;
+  text-align: center;
+}
+
+.faq-section h2 {
+  margin-bottom: 8px;
+}
+
+.faq-section p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* FAQ WRAPPER */
+.faq {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+/* FAQ BUTTON */
+.faq-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #0b1f3a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.faq-btn:hover,
+.faq-btn:focus {
+  background: #ffbeeb;
+  color: #0b1f3a;
+  outline: 3px solid #ffbeeb;
+}
+
+/* =========================
+   FAQ ANSWER (IMPORTANT FIX)
+   WHY: JS toggles "open" class
+========================= */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  background: white;
+  padding: 0 12px;
+  border-radius: 0 0 8px 8px;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+/* OPEN STATE (used by JS) */
+.faq-content.open {
+  max-height: 200px;
+  padding: 12px;
+}
+
+/* =========================
+   ACCESSIBILITY: REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* =========================
+   MEDIA PAGE CUSTOM STYLES
+   (TAILWIND SAFE — NO LAYOUT OVERRIDES)
+========================= */
+
+/* Page wrapper spacing ONLY */
+.media-section {
+  padding: 4rem 1.5rem;
+}
+
+/* Headings polish */
+.media-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0b1f3a;
+}
+
+/* Subtext */
+.media-section p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   VIDEO STYLING (SAFE)
+========================= */
+.featured-video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Wrapper keeps Tailwind layout intact */
+.media-video-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* =========================
+   AUDIO PLAYER
+========================= */
+.featured-audio {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  display: block;
+}
+
+/* =========================
+   MEDIA CARDS (VISUAL ONLY)
+   NOTE: does NOT control grid layout
+========================= */
+.media-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   TYPEWRITER EFFECT (OPTIONAL)
+========================= */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #0b1f3a;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* =========================
+   SCROLL REVEAL (OPTIONAL)
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .typewriter {
+    width: 100%;
+    border-right: none;
+  }
+}
+
+/* =========================================================
+   CONTACT PAGE + FAQ + MEDIA FIXED STYLESHEET
+   WHY: prevents CSS conflicts with other pages (portfolio, media, home)
+   ========================================================= */
+
+/* =========================
+   CONTACT CONTAINER
+   ========================= */
+.contact-container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Title + intro text */
+.contact-container h1 {
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* =========================
+   FORM STRUCTURE
+   WHY: ensures consistent spacing + accessibility
+   ========================= */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels must always be visible (accessibility requirement) */
+label {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* Inputs + textarea */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Focus state (DO NOT REMOVE — accessibility requirement) */
+input:focus,
+textarea:focus {
+  outline: 3px solid #ffbeeb;
+  border-color: transparent;
+}
+
+/* =========================
+   ERROR MESSAGES (INLINE)
+   ========================= */
+.error {
+  color: #c62828;
+  font-size: 0.85rem;
+  min-height: 16px;
+  margin-top: 4px;
+}
+
+/* =========================
+   CHARACTER COUNTER
+   ========================= */
+.counter {
+  font-size: 0.8rem;
+  text-align: right;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* =========================
+   BUTTON STYLES
+   ========================= */
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #0b1f3a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* hover + keyboard focus */
+button:hover,
+button:focus {
+  background: #ffbeeb;
+  color: #0b1f3a;
+  outline: 3px solid #ffbeeb;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+   ========================= */
+.success {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: #d4edda;
+  border-radius: 10px;
+  color: #155724;
+}
+
+
+/* =========================================================
+   MEDIA PAGE FIX (ONLY SAFE ADDITIONS)
+   WHY: avoids breaking existing layout
+   ========================================================= */
+
+.media-section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.media-video-wrapper {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.featured-video {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.media-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.media-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* =========================================================
+   FAQ OVERRIDE FIX (FOR CONFLICTING CSS)
+   WHY: forces accordion to work even with duplicate CSS above
+   IMPORTANT: place at VERY BOTTOM of stylesheet
+========================================================= */
+
+/* FORCE CLOSED STATE */
+.faq-section .faq-content {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+/* FORCE OPEN STATE */
+.faq-section .faq-content.open {
+  max-height: 600px !important; /* big enough for any answer */
+  padding: 14px !important;
+}
+
+/* ENSURE BUTTON STILL WORKS */
+.faq-section .faq-btn {
+  cursor: pointer;
+}
+
+/* OPTIONAL SAFETY: prevents layout shift issues */
+.faq-section .faq {
+  display: block;
+}
+
+/* CONTACT PAGE WRAPPER */
+.contact-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ERRORS */
+.error {
+  color: red;
+  font-size: 0.85rem;
+  min-height: 18px;
+}
+
+/* BUTTON */
+button {
+  margin-top: 15px;
+  padding: 12px;
+  background: #0b1f3a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffbeeb;
+  color: #0b1f3a;
+}
+
+/* SUCCESS MESSAGE */
+.success {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: #d4edda;
+  border-radius: 10px;
+}
+
+/* FAQ */
+.faq-section {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.faq-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #0b1f3a;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  transition: max-height 0.3s ease;
+  padding: 0 10px;
+}
+
+.faq-content.open {
+  padding: 10px;
+}
