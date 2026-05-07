@@ -1,130 +1,93 @@
+<!-- =========================
+HTML CODE CREDIT
+=========================
+Some HTML structure and layout organization in this file was developed with
+assistance from ChatGPT (OpenAI). I reviewed, edited, and customized
+all content to meet course requirements and design goals.
+========================= -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pearl & Pixel Marketing | Contact</title>
-
-  <!-- GLOBAL + PAGE CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contact.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pearl & Pixel Marketing</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ================= MAIN NAVIGATION ================= -->
   <nav class="navbar">
-    <a href="index.html" class="logo">Pearl & Pixel</a>
 
+    <div class="logo">Pearl & Pixel Marketing</div>
     <button class="hamburger" aria-label="Toggle menu">☰</button>
 
+    <!-- Primary navigation menu links -->
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="media.html">Media</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- =========================
-       CONTACT FORM SECTION
-  ========================= -->
-  <main class="contact-container">
+  <!-- ================= HERO BANNER SECTION ================= -->
+  <header class="hero">
+    <h1>Welcome to Pearl & Pixel Marketing</h1>
+    <p>Creative design & digital solutions</p>
+  </header>
 
-    <h1>Let’s Work Together</h1>
-    <p>Have a project in mind? Send me a message!</p>
+  <!-- ================= MAIN PAGE CONTENT ================= -->
+  <main>
 
-    <form 
-      action="https://formspree.io/f/YOUR-ID" 
-      method="POST" 
-      id="contactForm" 
-      novalidate>
+    <section class="cards">
 
-      <!-- NAME -->
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" required aria-describedby="nameError">
-      <div id="nameError" class="error"></div>
+      <!-- ===== ABOUT PAGE PREVIEW CARD ===== -->
+      <div class="card">
+        <a href="about.html" class="card-link">
+          <img src="images/AdobeStock_394354642.jpeg" alt="About Pearl & Pixel" class="card-img">
+          <h2>About</h2>
+          <p>This is my paragraph for the About page.</p>
+        </a>
+      </div>
 
-      <!-- EMAIL -->
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required aria-describedby="emailError">
-      <div id="emailError" class="error"></div>
+      <!-- ===== SERVICES PAGE PREVIEW CARD ===== -->
+      <div class="card">
+        <a href="services.html" class="card-link">
+          <img src="images/AdobeStock_399339954.jpeg" alt="Services" class="card-img">
+          <h2>Services</h2>
+          <p>This is my paragraph for the Services page.</p>
+        </a>
+      </div>
 
-      <!-- SUBJECT -->
-      <label for="subject">Subject</label>
-      <input id="subject" name="subject" type="text" required>
+      <!-- ===== PORTFOLIO PAGE PREVIEW CARD ===== -->
+      <div class="card">
+        <a href="portfolio.html" class="card-link">
+          <img src="images/istockphoto-1665093623-1024x1024.jpg" alt="Portfolio" class="card-img">
+          <h2>Portfolio</h2>
+          <p>This is my paragraph for the Portfolio page.</p>
+        </a>
+      </div>
 
-      <!-- MESSAGE -->
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" aria-describedby="messageError"></textarea>
+      <!-- ===== CONTACT PAGE PREVIEW CARD ===== -->
+      <div class="card">
+        <a href="contact.html" class="card-link">
+          <img src="images/istockphoto-1770753330-1024x1024.jpg" alt="Contact" class="card-img">
+          <h2>Contact</h2>
+          <p>This is my paragraph for the Contact page.</p>
+        </a>
+      </div>
 
-      <!-- CHARACTER COUNTER -->
-      <div id="charCount" class="counter">0 characters</div>
-
-      <div id="messageError" class="error"></div>
-
-      <button type="submit">Send Message</button>
-
-    </form>
-
-    <!-- SUCCESS MESSAGE -->
-    <div id="successMessage" class="success" aria-live="polite">
-      Thank you! Your message has been sent.
-    </div>
-
+    </section>
   </main>
 
-  <!-- =========================================================
-     FAQ SECTION
-     PURPOSE: Interactive accordion for user questions
-     ACCESSIBILITY: buttons use aria-expanded for screen readers
-========================================================= -->
-
-<section class="faq-section">
-
-  <h2>Frequently Asked Questions</h2>
-  <p>Still have questions? Click a question below.</p>
-
-  <div class="faq">
-
-    <!-- FAQ ITEM 1 -->
-    <button class="faq-btn" aria-expanded="false">
-      How fast do you respond?
-    </button>
-    <div class="faq-content">
-      <p>We typically respond within 24–48 hours during business days.</p>
-    </div>
-
-    <!-- FAQ ITEM 2 -->
-    <button class="faq-btn" aria-expanded="false">
-      Do you take new clients?
-    </button>
-    <div class="faq-content">
-      <p>Yes! We are currently accepting new projects and collaborations.</p>
-    </div>
-
-    <!-- FAQ ITEM 3 (optional extra for grading points) -->
-    <button class="faq-btn" aria-expanded="false">
-      What services do you offer?
-    </button>
-    <div class="faq-content">
-      <p>We offer branding, marketing strategy, social media management, and web design.</p>
-    </div>
-
-  </div>
-
-</section>
-
-  <!-- FOOTER -->
+  <!-- ================= FOOTER SECTION ================= -->
   <footer>
-    <p>© 2026 Pearl & Pixel Marketing</p>
+    &copy; 2026 Pearl & Pixel Marketing
   </footer>
-
-  <!-- JS -->
-  <script src="js/contact.js"></script>
 
 </body>
 </html>
-```
