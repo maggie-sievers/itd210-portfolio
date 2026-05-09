@@ -6,7 +6,7 @@ The site demonstrates skills in HTML, CSS, and JavaScript, including layout desi
 
 Live Website
 
-[Insert your Netlify or GitHub Pages link here]
+https://maggie-sievers.github.io/itd210-portfolio/
 
 GitHub Repository
 
