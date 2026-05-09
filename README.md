@@ -10,7 +10,7 @@ https://maggie-sievers.github.io/itd210-portfolio/
 
 GitHub Repository
 
-[Insert your GitHub repo link here]
+https://github.com/maggie-sievers/itd210-portfolio
 
 Technologies Used
 HTML5
