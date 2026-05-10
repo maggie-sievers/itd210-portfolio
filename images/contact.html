@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =========================================================
+       META + TITLE
+       WHY: ensures proper responsiveness + SEO structure
+  ========================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pearl & Pixel Marketing | Contact</title>
+
+  <!-- =========================================================
+       STYLESHEETS
+       WHY: global styles + page-specific overrides
+  ========================================================= -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+  <!-- =========================================================
+       NAVIGATION BAR
+       WHY: consistent site-wide navigation for usability
+  ========================================================= -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Pearl & Pixel</a>
+
+    <!-- Mobile hamburger menu -->
+    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- =========================================================
+       CONTACT SECTION
+       WHY: main interaction point for users
+  ========================================================= -->
+  <main class="contact-container">
+
+    <h1>Let’s Work Together</h1>
+    <p>Send a message and I’ll get back to you within 24–48 hours.</p>
+
+    <!-- =========================================================
+         CONTACT FORM (FORMSPREE ENABLED)
+         WHY: allows real email submission without backend
+    ========================================================= -->
+    <form
+      id="contactForm"
+      action="https://formspree.io/f/YOUR-FORM-ID"
+      method="POST"
+      novalidate>
+
+      <!-- NAME FIELD -->
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        required
+        aria-describedby="nameError">
+
+      <div class="error" id="nameError" aria-live="polite"></div>
+
+      <!-- EMAIL FIELD -->
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        aria-describedby="emailError">
+
+      <div class="error" id="emailError" aria-live="polite"></div>
+
+      <!-- SUBJECT FIELD -->
+      <label for="subject">Subject</label>
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="What is this regarding?"
+        required>
+
+      <!-- MESSAGE FIELD -->
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Write your message..."
+        required
+        aria-describedby="messageError"></textarea>
+
+      <!-- CHARACTER COUNTER -->
+      <div class="counter" id="charCount">0 characters</div>
+
+      <div class="error" id="messageError" aria-live="polite"></div>
+
+      <!-- SUBMIT BUTTON -->
+      <button type="submit">Send Message</button>
+
+    </form>
+
+    <!-- =========================================================
+         SUCCESS MESSAGE
+         WHY: gives user confirmation after submission
+    ========================================================= -->
+    <div id="successMessage" class="success" aria-live="polite">
+      Thank you! Your message has been sent successfully.
+    </div>
+
+  </main>
+
+  <!-- =========================================================
+       FAQ SECTION (INTERACTIVE ELEMENT #2)
+       WHY: improves engagement + answers common questions
+  ========================================================= -->
+  <section class="faq-section">
+
+    <h2>Frequently Asked Questions</h2>
+    <p>Quick answers before you reach out.</p>
+
+    <div class="faq">
+
+      <!-- FAQ ITEM 1 -->
+      <button class="faq-btn" aria-expanded="false">
+        How fast do you respond?
+      </button>
+      <div class="faq-content">
+        <p>Typically within 24–48 hours depending on workload.</p>
+      </div>
+
+      <!-- FAQ ITEM 2 -->
+      <button class="faq-btn" aria-expanded="false">
+        Do you accept new clients?
+      </button>
+      <div class="faq-content">
+        <p>Yes, I am currently accepting new projects and collaborations.</p>
+      </div>
+
+      <!-- FAQ ITEM 3 -->
+      <button class="faq-btn" aria-expanded="false">
+        What services do you offer?
+      </button>
+      <div class="faq-content">
+        <p>Web design, branding, and digital marketing strategy.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+       WHY: consistent site branding
+  ========================================================= -->
+  <footer>
+    <p>© 2026 Pearl & Pixel Marketing</p>
+  </footer>
+
+  <!-- =========================================================
+       JAVASCRIPT
+       WHY: form validation + FAQ + interactivity
+  ========================================================= -->
+  <script src="js/contact.js"></script>
+
+</body>
+</html>
